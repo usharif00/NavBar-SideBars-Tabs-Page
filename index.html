@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+          $( "#accordion" ).accordion();
+        } );
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-left">
+            <li><a href="#"><i class="fas fa-home"></i></a></li>
+            <li>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <input type="text" placeholder="  Search here" class="search-input">
+            </li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="#" id="bellIcon"><i class="fas fa-bell"></i></a></li>
+            <li><a href="#" id="menuIcon"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab" data-target="#home">Home</div>
+        <div class="tab" data-target="#following">Following</div>
+        <div class="tab" data-target="#videos">Videos</div>
+        <div class="tab" data-target="#friends">Friends</div>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <div id="home" class="tab-item">Welcome to the Home tab!</div>
+        <div id="following" class="tab-item" style="display: none;">Here are the people you are following.</div>
+        <div id="videos" class="tab-item" style="display: none;">Watch your favorite videos here.</div>
+        <div id="friends" class="tab-item" style="display: none;">Connect with your friends here.</div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div class="hamburger-tabs">
+    <i class="fas fa-bars" id="hamburgerIcon"></i>
+    <ul class="dropdown-content">
+        <li>Home</li>
+        <li>Following</li>
+        <li>Videos</li>
+        <li>Friends</li>
+    </ul>
+</div>
+
+    <!-- Notifications Bar -->
+    <div id="sidebar" class="sidebar">
+        <h2>Notifications</h2>
+        <ul>
+            <li>Notification 1</li>
+            <li>Notification 2</li>
+            <li>Notification 3</li>
+            <li>No new notifications</li>
+        </ul>
+    </div>
+
+    <!-- Settings Bar -->
+    <div id="settingsSidebar" class="sidebar">
+        <h2>Settings</h2>
+        <div id="accordion">
+            <h3>Profile Settings</h3>
+            <div>
+                <ul>
+                    <li>Edit Profile Photo</li>
+                    <li>Edit Bio</li>
+                    <li>Edit Cover Photo</li>
+                  </ul>
+            </div>
+            <h3>Privacy Settings</h3>
+            <div>
+                <ul>
+                    <li>Privacy Center</li>
+                    <li>Device Requests</li>
+                    <li>Order and Payments</li>
+                  </ul>
+            </div>
+            <h3>Security Settings</h3>
+            <div>
+              <ul>
+                <li>Security 1</li>
+                <li>Security 2</li>
+                <li>Security 3</li>
+              </ul>
+            </div>
+            <h3>Help & Support</h3>
+            <div>
+              <ul>
+                <li>Hello Center</li>
+                <li>Support Inbox</li>
+                <li>Terms & Policies</li>
+                <li>Report a Problem</li>
+              </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
